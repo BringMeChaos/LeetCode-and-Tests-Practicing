@@ -1,4 +1,4 @@
-public class Test2023_B_M79_Q2 {
+public class Test2023_B_M79_Q2_findNumber {
     // Question 2:
     // given an array in decending order, find an element that 
     // is larger than the smallest element and smaller then the largest 

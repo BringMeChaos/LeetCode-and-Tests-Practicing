@@ -1,4 +1,4 @@
-public class Test2023_A_M65_Q1_Uni {
+public class Test2023_A_M65_Q1_Univ_countPairs {
     public static void main(String[] args){
         System.out.println(countPairs(2));
     }

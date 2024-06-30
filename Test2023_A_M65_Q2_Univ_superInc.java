@@ -1,4 +1,4 @@
-public class Test2023_A_M65_Q2_Univeli{
+public class Test2023_A_M65_Q2_Univ_superInc{
     // given a supper acending array where each element in the array is bigger
     // than the sum of all the previous numbers.
     // given this array and an integer K, find if there is a sub-group of the 
