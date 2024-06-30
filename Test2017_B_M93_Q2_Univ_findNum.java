@@ -53,6 +53,9 @@ public class Test2017_B_M93_Q2_Univ_findNum {
         // using binary search to find if num is within the array rangeA, and 
         // if so, return it's index, if not, return -1.
 
+        // Time: O(log(n))
+        // Space: O(5) = O(1)
+
         int low = 0;
         int high = rangeA.length-1;
         int mid;
