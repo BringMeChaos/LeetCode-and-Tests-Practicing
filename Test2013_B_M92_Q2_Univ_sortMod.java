@@ -25,7 +25,7 @@ public class Test2013_B_M92_Q2_Univ_sortMod{
         int temp; // temp initiated outside of loop, to use in swap later
         //int j = 0; // can initiate j outside the loop because of space complexity
 
-        for(int i = 0; i < k; i++){ // this loop is going from 0 to k 
+        for(int i = 0; i < k; i++){ // this loop is going from 0 to k
             for(int j = 0; j < a.length; j++){ // this loop is going thru the array
                 // check liniarli if we have items that result in i (0 to k) when modded
                 // if found need to swap with the curr counter place
