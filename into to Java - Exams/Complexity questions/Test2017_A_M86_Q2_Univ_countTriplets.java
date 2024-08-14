@@ -1,4 +1,22 @@
 public class Test2017_A_M86_Q2_Univ_countTriplets {
+    // this answer is not finished yet.
+
+    
+    /* Question:
+     * Given an array of integers in an proper decending order (largest to smallest with no repetitions)
+     * and an integer num, find how many triplets there are in the array where their sum is smaller than num.
+     * The trplets dont have to be next to each other.
+     * No need to check if the array is empty.
+     * 
+     * For example:
+     * Array = {-2, 0, 1, 3}
+     * num = 2
+     * we should find the triplets: (-2,0,3), (-2,0,1)
+     * we should return 2 in this case.
+     * 
+     */
+
+
     public static void main(String[] args) {
         int[] arr1 = {-2,0,1,3};
         int[] arr2 = {1,3,4,5,7};

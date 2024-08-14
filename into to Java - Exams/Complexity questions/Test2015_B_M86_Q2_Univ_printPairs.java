@@ -1,17 +1,17 @@
 public class Test2015_B_M86_Q2_Univ_printPairs {
 
-    // The question:
-    // given an array ordred in acending order (smallest to largest)
-    // and given positiv int k, print all the paris in that array where
-    // k is the difference between them. 
-    //
-    // for example:
-    // {-3,0,1,3,5,12}
-    //
-    // output should be:
-    //
-    // Pair Found: (1,3)
-    // Pair Found: (3,5)
+    /* Question: 
+     * given an array ordred in acending order (smallest to largest)
+     * and given positiv int k, print all the paris in that array where
+     * k is the difference between them. 
+     * 
+     * for example:
+     * {-3,0,1,3,5,12}
+     * 
+     * output should be:
+     * Pair Found: (1,3)
+     * Pair Found: (3,5)
+     */
 
     public static void main(String[] args) {
         int a[] = {-7,-3,-1,0,1,3,5,12,14,17,19,25,30};
