@@ -11,7 +11,7 @@ public class Test2023_B_M79_Q2_findNumber {
 
     public static void main(String[] args) {
         int[] arr = {20,6,5,4,3};
-        System.out.println(findNumber2(arr));
+        System.out.println(findNumber(arr));
     }
     // my solution uses sliding window
     public static int findNumber(int[] arr){
@@ -32,23 +32,23 @@ public class Test2023_B_M79_Q2_findNumber {
         return -1;
     }
 
-    // This is from the test solutions
-    public static int findNumber2(int[] arr){
-        int low = 0;
-        int high = arr.length-1;
-        while(low <= high){
-            int mid = (low + high)/2;
-            int expected = arr[0] - mid;
-            if(arr[mid] != expected){
-                if(mid > 0 && arr[mid - 1] - arr[mid] > 1){
-                    return arr[mid - 1] - 1;
-                }
-                high = mid - 1;
-            }
-            else{
-                low = mid + 1;
-            }
-        }
-        return Integer.MIN_VALUE;
-    }
+    // // This is from the test solutions
+    // public static int findNumber2(int[] arr){
+    //     int low = 0;
+    //     int high = arr.length-1;
+    //     while(low <= high){
+    //         int mid = (low + high)/2;
+    //         int expected = arr[0] - mid;
+    //         if(arr[mid] != expected){
+    //             if(mid > 0 && arr[mid - 1] - arr[mid] > 1){
+    //                 return arr[mid - 1] - 1;
+    //             }
+    //             high = mid - 1;
+    //         }
+    //         else{
+    //             low = mid + 1;
+    //         }
+    //     }
+    //     return Integer.MIN_VALUE;
+    // }
 }

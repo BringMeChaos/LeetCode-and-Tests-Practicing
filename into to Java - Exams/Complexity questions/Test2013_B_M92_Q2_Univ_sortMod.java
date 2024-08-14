@@ -1,15 +1,17 @@
 public class Test2013_B_M92_Q2_Univ_sortMod{
+    // Question:
+    // given an array of positive numbers, and a int k, 
+    // sort the array with k modulu.
+    // do not use new arrays.
 
 
     // Time complexity: O(n * k) = O(n)
     // Space complecity: O(4) = O(1)
 
-
     public static void main(String[] args){
         int a[] = {39,2,6,0,81};
         int k = 10;
         
-
         sortMod(a,k);
 
         // for loop to print the result array
