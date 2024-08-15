@@ -7,6 +7,18 @@ public class Test2015_A_M91_Q2_Univ_whatFisDoing {
      * 3. re-write "what" such that it will run in better time complexity.
      * 4. what is the time complexity and space complexity of the method you have wrote?
      * 
+     * Answers:
+     * 1. f is giving the sum of the sub arrays passed by what, what is checking if theres a subarray
+     * where it's sum is equel to num.
+     * 
+     * 2. what's time complexity is O(n^3), f is O(n), then what is O(n^2), and for each
+     * itteration of what, we doing another itteration on the array. 
+     * 
+     * 3. written bellow as what2.
+     * 
+     * 4. time complexity: O(n^2) since for each itteration of i we are going with j liniarly thru the array.
+     * space complexity: O(1).
+     * 
      */
 
     public static int f(int[] a, int low, int high){
