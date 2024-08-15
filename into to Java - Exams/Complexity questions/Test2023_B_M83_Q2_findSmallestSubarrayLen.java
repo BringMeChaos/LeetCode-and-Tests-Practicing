@@ -1,5 +1,5 @@
 public class Test2023_B_M83_Q2_findSmallestSubarrayLen {
-    // given an array of integers (not sorted) find the subarrays where their sum is bigger than num.
+    // given an array of positive integers (not sorted) find the subarrays where their sum is bigger than num.
     // the subarrays should be the smallest possible, meaning:
     // when an array that it's sum bigger than num, there is no need to continue summing the rest of the array
     // since it's obviouse they all will be bigger than the sub array we already found.
@@ -108,4 +108,62 @@ public class Test2023_B_M83_Q2_findSmallestSubarrayLen {
             return minLength;
         }
     }
+
+    // practicing this question again ============================================================
+    // this solution wont break if an array of 1 items is given.
+    public static int findSmallestSubarrayLenPractice(int[] arr, int num){
+        // sliding window
+
+        // int left = 0;
+        int right = 0;
+        int currSum = 0;
+        int smallestArr = Integer.MAX_VALUE;
+        String smallestArrString = "";
+
+
+        for (int left = 0; left < arr.length; left++){
+            right = left;
+            
+            while (right < arr.length){
+                
+                currSum += arr[right];
+    
+                if (currSum > num){
+                    // print found pair
+                    System.out.println("Subarray found: [" + left + "-" + right + "]");
+                    
+                    // check if this is smallest array
+                    if (right - left < smallestArr){
+                        smallestArr = right - left;
+                        smallestArrString = "Smallest subarry: [" + left + "-" + right + "]";
+                    }
+                    // reset currSum 
+                    currSum = 0;
+
+                    // go out of while loop to increase left in the for loop
+                    break; 
+                }
+    
+                if (currSum <= num){
+                    // check if right is at the end of the arrayto avoid out of bound err
+                    if (right == arr.length-1){
+                        currSum = 0;
+                        break;
+                    }
+                    right++;
+                }
+            }
+        }
+
+        // check if we didnt found any subarrays to return 0
+        if (smallestArr == Integer.MAX_VALUE){
+            System.out.print("No subarrays found");
+            return 0;
+        } 
+        else {
+            System.out.print(smallestArrString);
+            return smallestArr;
+        }
+    }
+
 }
