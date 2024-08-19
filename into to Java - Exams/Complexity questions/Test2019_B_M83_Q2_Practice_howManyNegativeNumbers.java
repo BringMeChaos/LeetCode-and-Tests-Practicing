@@ -21,7 +21,9 @@ public class Test2019_B_M83_Q2_Practice_howManyNegativeNumbers {
 
     }
 
-
+    // this is the first solution, but its not the best run time!
+    // time complexity: O(n log m)
+    // space complexity: O(1)
 
     public static int howManyNegativeNumbers(int[][] arr){
         // binary search on each line

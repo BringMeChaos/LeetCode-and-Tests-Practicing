@@ -1,5 +1,11 @@
 public class Test2017_A_M87_Q2_Univ_isPythagorean {
     
+    /*
+     * Question:
+     * Givin an array of positive numbers in an ascending order (smallest to biggest)
+     * find if a Pythaggorean triplet exist in the array.
+     * no need printing it, just if it exist.
+     */
 
     public static void main(String[] args){
         int [] arr = {1,3,4,5,6};
