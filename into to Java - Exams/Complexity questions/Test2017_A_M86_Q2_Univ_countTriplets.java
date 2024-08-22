@@ -3,9 +3,9 @@ public class Test2017_A_M86_Q2_Univ_countTriplets {
 
     
     /* Question:
-     * Given an array of integers in an proper decending order (largest to smallest with no repetitions)
+     * Given an array of integers in an proper decending order (smallest to largest with no repetitions)
      * and an integer num, find how many triplets there are in the array where their sum is smaller than num.
-     * The trplets dont have to be next to each other.
+     * The triplets dont have to be next to each other.
      * No need to check if the array is empty.
      * 
      * For example:
@@ -19,8 +19,9 @@ public class Test2017_A_M86_Q2_Univ_countTriplets {
 
     public static void main(String[] args) {
         int[] arr1 = {-2,0,1,3};
-        int[] arr2 = {1,3,4,5,7};
-        System.out.println(countTriples(arr1,2));
+        int[] arr2 = {1,2,3};
+        int num = 2;
+        System.out.println(countTriplets3(arr2,2));
     }
 
 
@@ -90,5 +91,63 @@ public class Test2017_A_M86_Q2_Univ_countTriplets {
             System.out.println("Iteration is: " + countIter);
         }
         return count;
-    }   
+    }
+
+
+    // practising this question after a while, I dont think the above answers were complete.
+
+    public static int countTriplets3(int[] arr, int num){
+        // using sliding window 
+
+    // int i = 0; // initialize it in for loop
+        int j = 1;
+        int k = 2;
+        int sum ;
+        int count = 0;
+
+
+        // {-2,0,1,3};
+        // num = 2
+        for(int i = 0; i < arr.length-2; i++){
+            j = i+1;
+            k = i+2;
+            sum = arr[i] + arr[j];
+
+            while(i <= arr.length-1){
+                sum += arr[k];
+
+                if (sum < num){
+                    System.out.println("Found a sub array! : " + i + ", " + j + ", " + k);
+                    count +=1;
+                    
+                    // going to increment indexes, need to check if were at the end of the array
+                    // if k is at the end, we need to increment j, but first check if j is at the end.
+                    // if j is at the end, need to increment i, so break from the while loop to get to the for loop.
+                   
+                    if (k == arr.length-1){
+                        if (j == arr.length-2){
+                            break;
+                        }
+                        j++;
+                        k = j+1;
+                        // k = j + 1;
+                    }
+                    else{
+                        k++;
+                    }
+                    // reset sum.
+                    sum = arr[i] + arr[j];
+                }
+
+                // if sum is bigger then num, then no need to keep checking, break to increase i.
+                if (sum >= num){
+                    break;
+                }
+            }
+        }
+        return count;
+    }
+
+
+
 }
